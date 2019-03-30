@@ -25,8 +25,6 @@ import com.endava.tx.repository.EmployeeRepository;
 import lombok.extern.slf4j.Slf4j;
 
 @SpringBootApplication
-// @EnableTransactionManagement(mode = AdviceMode.ASPECTJ)
-// @EnableLoadTimeWeaving(aspectjWeaving = EnableLoadTimeWeaving.AspectJWeaving.ENABLED)
 @Slf4j
 @Import(TransactionManagerConfiguration.class)
 public class ThirdSpringTxPitfallsApplication {
@@ -160,4 +158,4 @@ public class ThirdSpringTxPitfallsApplication {
 
 
 
-//-javaagent:c:/users/anrosca/.m2/repository/org/springframework/spring-agent/2.5.6.SEC03/spring-agent-2.5.6.SEC03.jar -javaagent:c:/users/anrosca/.m2/repository/org/aspectj/aspectjweaver/1.9.2/aspectjweaver-1.9.2.jar
+//-javaagent:spring-agent-2.5.6.SEC03.jar -javaagent:aspectjweaver-1.9.2.jar
